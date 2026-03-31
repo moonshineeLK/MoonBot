@@ -1,0 +1,47 @@
+# -*- coding: utf-8 -*-
+
+print(f"\n🌙 Welcome to MoonBot 💜")
+
+print(f"\nType 'bye' to exit.")
+
+name = input(f"\nWhat's your nam?: ")
+
+print(f"\nHi {name} 💕 I'm MoonBot. Let's talk.\n")
+
+last_mood = ""
+
+while True:
+    msg = input(f"\nYou: ").lower()
+
+    if msg == "bye":
+        print(f"\nMoonBot: Bye byee 🌟 Take care 💜")
+        break
+
+    elif "sad" in msg:
+        last_mood = "sad"
+        print(f"\nMoonBot: Aww….who made my {name} sad? come here....you deserve a hug 💕")
+        
+    elif "happy" in msg:
+        last_mood = "happy"
+        print(f"\nMoonBot: Yayyy! happiness suits you! 😭💖")
+
+    elif "tired" in msg:
+        last_mood = "tired"
+        print(f"\nMoonBot: Go rest, champ 💤 And shine even brighter after.")
+
+    elif "pretty" in msg:
+        last_mood = "pretty"
+        print(f"\nMoonBot: you should always feel pretty, because why not, i mean just look at you 😌💜")
+
+    elif "unsatisfied" in msg:
+        last_mood = "unsatisfied"
+        print(f"\nMoonBot: {name}, you tried and trust me, it was enough, you can't give your best every single day.")
+        
+    elif "how am i" in msg:
+      if last_mood == "": 
+         print(f"\nMoonBot: Hmm...i am still learning your gentle language, {name} 😌💗 ")
+      else:
+          print(f"\nMoonBot: Last time you felt {last_mood}")
+
+    else:
+        print(f"\nMoonBot: Hmm… interesting, tell me more 🫶")
